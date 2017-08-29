@@ -14,7 +14,8 @@ navbarPage(
   tabPanel("Analysis",
            withSpinner(dataTableOutput('my_data'),type = 4)
            #dataTableOutput('my_data')
-  )
+  ), tabPanel("Detailed results", 
+              withSpinner(dataTableOutput('my_data2'),type = 4))
   
   
 )#nav

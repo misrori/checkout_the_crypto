@@ -13,5 +13,11 @@ function(input, output, session) {
                                                  columnDefs = list())) 
     
   )
-  
+  output$my_data2 <- renderDataTable(
+    DT::datatable(havi_adatok(),extensions = c('Buttons','FixedHeader'),class = 'cell-border stripe',rownames = FALSE,
+                  filter = 'top', options = list(dom = 'Blfrtip', fixedHeader = TRUE,pageLength = 50,lengthMenu = c(10,50,500,5000, 10000, 25000 ),
+                                                 buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),
+                                                 columnDefs = list())) 
+    
+  )
 }
